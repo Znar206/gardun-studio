@@ -6,7 +6,7 @@
 <title>Gardun Studio</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Vazirmatn:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root{
     --bg: #0A0A0A;
@@ -23,21 +23,23 @@
 
   html{
     background:var(--bg);
+    scroll-behavior: smooth;
   }
 
   body{
     background:var(--bg);
     color:var(--text-primary);
-    font-family:'Cairo','Space Grotesk',sans-serif;
+    font-family: 'Vazirmatn', sans-serif;
     min-height:100vh;
     display:flex;
     flex-direction:column;
     align-items:center;
     overflow-x:hidden;
     position:relative;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 
-  
   .orbit-field{
     position:fixed;
     top:50%; left:50%;
@@ -87,13 +89,12 @@
     z-index:1;
     width:100%;
     max-width:480px;
-    padding:64px 28px 48px;
+    padding:64px 24px 48px;
     display:flex;
     flex-direction:column;
     align-items:center;
   }
 
-  
   .mark{
     width:72px;
     height:72px;
@@ -130,8 +131,8 @@
   }
 
   .brand-name{
-    font-family:'Space Grotesk',sans-serif;
-    font-size:26px;
+    font-family:'Space Grotesk', sans-serif;
+    font-size:28px;
     font-weight:500;
     letter-spacing:0.01em;
     color:var(--text-primary);
@@ -146,7 +147,7 @@
     text-align:center;
     line-height:1.8;
     max-width:300px;
-    margin-bottom:6px;
+    margin-bottom:12px;
     animation:fade-up 0.8s ease 0.32s both;
   }
 
@@ -170,9 +171,10 @@
     100%{ box-shadow:0 0 0 0 rgba(216,155,60,0); }
   }
   .status-text{
-    font-size:12px;
+    font-size:12.5px;
     color:var(--text-secondary);
     letter-spacing:0.02em;
+    font-weight: 400;
   }
 
   @keyframes fade-up{
@@ -184,7 +186,7 @@
     width:100%;
     display:flex;
     flex-direction:column;
-    gap:10px;
+    gap:12px;
     animation:fade-up 0.8s ease 0.5s both;
   }
 
@@ -229,11 +231,13 @@
     text-align:left;
   }
   .link-title{
+    font-family: 'Space Grotesk', sans-serif;
     font-size:15px;
     font-weight:500;
     margin-bottom:2px;
   }
   .link-sub{
+    font-family: 'Space Grotesk', sans-serif;
     font-size:12.5px;
     color:var(--text-secondary);
   }
@@ -247,30 +251,19 @@
 
   .section-label{
     align-self:flex-start;
-    font-size:12px;
+    font-size:13px;
     color:var(--text-secondary);
-    letter-spacing:0.04em;
-    margin:0 0 2px 0;
+    font-weight: 500;
+    letter-spacing:0.02em;
+    margin:0 4px 2px 0;
   }
   .section-label.spaced{
-    margin:30px 0 12px 0;
-  }
-
-  footer{
-    margin-top:48px;
-    text-align:center;
-    animation:fade-up 0.8s ease 0.6s both;
-  }
-  .footer-line{
-    font-size:12px;
-    color:var(--text-secondary);
-    opacity:0.7;
-    direction:ltr;
+    margin:24px 4px 2px 0;
   }
 
   .about{
     width:100%;
-    margin-top:44px;
+    margin-top:48px;
     padding-top:36px;
     border-top:0.5px solid var(--border);
     position:relative;
@@ -286,16 +279,17 @@
   }
   .about-label{
     align-self:flex-start;
-    font-size:12px;
-    color:var(--text-secondary);
-    letter-spacing:0.04em;
+    font-size:13px;
+    font-weight: 600;
+    color:var(--accent);
     margin-bottom:14px;
   }
   .about-text{
-    font-size:14.5px;
+    font-size:15px;
     line-height:2;
     color:var(--text-secondary);
-    margin-bottom:24px;
+    margin-bottom:28px;
+    text-align: justify;
   }
   .about-text strong{
     color:var(--text-primary);
@@ -310,7 +304,7 @@
     width:100%;
     padding:16px;
     background:var(--accent);
-    color:rgba(10, 10, 10, 1);
+    color:#0A0A0A;
     font-weight:700;
     font-size:15px;
     text-decoration:none;
@@ -328,6 +322,19 @@
   .cta-button svg{
     width:18px;
     height:18px;
+  }
+
+  footer{
+    margin-top:48px;
+    text-align:center;
+    animation:fade-up 0.8s ease 0.6s both;
+  }
+  .footer-line{
+    font-family: 'Space Grotesk', sans-serif;
+    font-size:12px;
+    color:var(--text-secondary);
+    opacity:0.7;
+    direction:ltr;
   }
 
   @media (prefers-reduced-motion: reduce){
@@ -369,7 +376,7 @@
 
     <p class="section-label">پەیوەندی</p>
 
-    <a class="link-card" href="https://wa.me/9647721518484?text=%D8%B3%DA%B5%D8%A7%D9%88%20%D8%AF%DB%95%D9%85%DB%95%D9%88%DB%8E%D8%AA%20%D8%AF%DB%95%D8%B1%D8%A8%D8%A7%D8%B1%DB%95%DB%8C%20%D8%A8%DB%95%D8%B1%D9%87%DB%95%D9%85%DB%95%DA%A9%D8%A7%D9%86%D8%AA%D8%A7%D9%86%20%D8%A8%D9%BE%D8%B1%D8%B3%D9%85" target="_blank" rel="noopener">
+    <a class="link-card" href="https://wa.me/9647721518484?text=%D8%B3%DA%B5%D8%A7%D9%88%20%D8%AF%DB%95%D9%85%DB%95%D9%88%D9%8A%CC%84%D8%AA%20%D8%AF%DB%95%D8%B1%D8%A8%D8%A7%D8%B1%DB%95%DB%8C%20%D8%A8%DB%95%D8%B1%D9%87%DB%95%D9%85%DB%95%DA%A9%D8%A7%D9%86%D8%AA%D8%A7%D9%86%20%D8%A8%D9%BE%D8%B1%D8%B3%D9%85" target="_blank" rel="noopener">
       <span class="link-icon">
         <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.2h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm0 1.67c2.21 0 4.29.86 5.85 2.42a8.22 8.22 0 0 1 2.42 5.82c0 4.55-3.71 8.25-8.27 8.25a8.3 8.3 0 0 1-4.21-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.18 8.18 0 0 1-1.27-4.41c0-4.55 3.71-8.22 8.27-8.22zm-4.5 4.73c-.16 0-.43.06-.65.31s-.86.84-.86 2.05.88 2.38 1 2.55c.13.16 1.7 2.71 4.21 3.69 2.08.82 2.5.66 2.95.62.45-.04 1.45-.59 1.65-1.16.2-.57.2-1.06.14-1.16-.06-.1-.23-.16-.48-.28s-1.45-.71-1.68-.8c-.22-.08-.39-.12-.55.12s-.62.8-.77.96c-.14.16-.28.18-.52.06-.25-.12-1.04-.38-1.99-1.22-.74-.65-1.23-1.46-1.38-1.7s-.01-.39.11-.51c.11-.11.25-.28.37-.42s.16-.24.24-.4c.08-.16.04-.3-.02-.42-.06-.12-.55-1.36-.76-1.86-.2-.48-.4-.42-.55-.42z"/></svg>
       </span>
@@ -426,12 +433,12 @@
   </div>
 
   <div class="about">
-    <p class="about-label">بۆچی گەردوون ستۆدیۆ؟</p>
-    <p class="about-text">لە جیهانی ئەمڕۆدا، ماڵپەڕەکەت تەنها ڕووکارێکی جوان نییە، بەڵکو گەورەترین نوێنەری بزنسەکەتە لەسەر هێڵ. ئێمە لە <strong>گەردوون ستۆدیۆ</strong> تەنها کۆد نانووسین؛ ئێمە ناسنامەیەکی دیجیتاڵیی بەهێز، خێرا و بێوێنە بۆ پڕۆژەکەت بونیاد دەنێین کە سەرنجی کڕیار ڕادەکێشێت و متمانەت پێدەبەخشێت. ئەگەر دەتەوێت لە پێشەنگی ڕکابەرەکانت بیت، با پێکەوە دەست پێبکەین.</p>
+    <p class="about-label">دەربارەی گەردوون ستۆدیۆ</p>
+    <p class="about-text">گرووپێکی بازرگانیی کوردی کە کۆمپانیا لە بواری تەکنەلۆژیا، میدیا، فاشن، میوزیک، بەرهەمهێنان و ژێرخانی دیجیتاڵ دروست دەکات. <strong>لە کوردستانەوە دروستکراوە. بۆ گەشەکردن داڕێژراوە.</strong></p>
     
-    <a class="cta-button" href="https://wa.me/9647721518484?text=%D8%B3%DA%B5%D8%A7%D9%88%20%DA%AF%DB%95%D8%B1%D8%AF%D9%85%D9%8block%20%D8%B3%D8%AA%DB%95%DB%8F%D8%AF%DB%8C%DB%B5%D9%88%D8%8C%20%D8%AF%DB%95%D8%AA%D9%85%D9%85%20%DA%A9%D8%A7%D8%AA%DB%8C%DA%AA%20%D8%AF%DB%90%D8%A7%D8%B1%DB%8C%20%D8%A8%DA%A9%DB%95%D9%85%20%D8%A8%DB%block%20%D9%82%D8%B3%DB%95%DA%A9%D8%B1%D8%AF%D9%86%20%D9%84%DB%95%D8%B3%DB%95%D8%B1%20%D9%85%D8%A7%DA%B5%D9%BE%DB%95%DA%95%DB%8C%20%D8%A8%D8%B2%D9%86%D8%B3%DB%95%DA%A9%DB%95%D9%85%D8%9F" target="_blank" rel="noopener">
+    <a class="cta-button" href="https://wa.me/9647721518484?text=%D8%B3%D9%BE%D9%84%D8%A7%D9%88%20%D8%AF%DB%95%D9%85%DB%95%D9%88%D9%8A%CC%84%D8%AA%20%D8%AF%DB%95%D8%B1%D8%A8%D8%A7%D8%B1%DB%95%DB%8C%20%D8%A8%DB%95%D8%B1%D9%87%DB%95%D9%85%DB%95%DA%A9%D8%A7%D9%86%D8%AA%D8%A7%D9%86%20%D8%A8%D9%BE%D8%B1%D8%B3%D9%85" target="_blank" rel="noopener">
       <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
-      ئێستا کاتی چاوپێکەوتن دیاری بکە 🗓️
+      پەیوەندیمان پێوە بکە 🚀
     </a>
   </div>
 
