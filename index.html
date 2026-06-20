@@ -295,10 +295,39 @@
     font-size:14.5px;
     line-height:2;
     color:var(--text-secondary);
+    margin-bottom:24px;
   }
   .about-text strong{
     color:var(--text-primary);
-    font-weight:500;
+    font-weight:600;
+  }
+
+  .cta-button{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+    width:100%;
+    padding:16px;
+    background:var(--accent);
+    color:rgba(10, 10, 10, 1);
+    font-weight:700;
+    font-size:15px;
+    text-decoration:none;
+    border-radius:14px;
+    transition:transform 0.15s ease, background 0.25s ease, box-shadow 0.25s ease;
+    box-shadow: 0 4px 15px rgba(216,155,60,0.2);
+  }
+  .cta-button:hover{
+    background:#e5a947;
+    box-shadow: 0 6px 20px rgba(216,155,60,0.3);
+  }
+  .cta-button:active{
+    transform:scale(0.985);
+  }
+  .cta-button svg{
+    width:18px;
+    height:18px;
   }
 
   @media (prefers-reduced-motion: reduce){
@@ -397,8 +426,13 @@
   </div>
 
   <div class="about">
-    <p class="about-label">دەربارەمان</p>
-    <p class="about-text">زۆربەی بازرگانیی کوردستان هێشتا ماڵپەڕیان نییە، یان ئەوەی هەیانە کۆنە و کارا نییە. <strong>گەردوون ستۆدیۆ</strong> بۆ ئەوە دروستبووە — نەک بۆ فرۆشتنی قسەی گەورە، بەڵکو بۆ دروستکردنی ماڵپەڕێک کە بەڕاستی کاردەکات و کڕیار دەهێنێت.</p>
+    <p class="about-label">بۆچی گەردوون ستۆدیۆ؟</p>
+    <p class="about-text">لە جیهانی ئەمڕۆدا، ماڵپەڕەکەت تەنها ڕووکارێکی جوان نییە، بەڵکو گەورەترین نوێنەری بزنسەکەتە لەسەر هێڵ. ئێمە لە <strong>گەردوون ستۆدیۆ</strong> تەنها کۆد نانووسین؛ ئێمە ناسنامەیەکی دیجیتاڵیی بەهێز، خێرا و بێوێنە بۆ پڕۆژەکەت بونیاد دەنێین کە سەرنجی کڕیار ڕادەکێشێت و متمانەت پێدەبەخشێت. ئەگەر دەتەوێت لە پێشەنگی ڕکابەرەکانت بیت، با پێکەوە دەست پێبکەین.</p>
+    
+    <a class="cta-button" href="https://wa.me/9647721518484?text=%D8%B3%DA%B5%D8%A7%D9%88%20%DA%AF%DB%95%D8%B1%D8%AF%D9%85%D9%8block%20%D8%B3%D8%AA%DB%95%DB%8F%D8%AF%DB%8C%DB%B5%D9%88%D8%8C%20%D8%AF%DB%95%D8%AA%D9%85%D9%85%20%DA%A9%D8%A7%D8%AA%DB%8C%DA%AA%20%D8%AF%DB%90%D8%A7%D8%B1%DB%8C%20%D8%A8%DA%A9%DB%95%D9%85%20%D8%A8%DB%block%20%D9%82%D8%B3%DB%95%DA%A9%D8%B1%D8%AF%D9%86%20%D9%84%DB%95%D8%B3%DB%95%D8%B1%20%D9%85%D8%A7%DA%B5%D9%BE%DB%95%DA%95%DB%8C%20%D8%A8%D8%B2%D9%86%D8%B3%DB%95%DA%A9%DB%95%D9%85%D8%9F" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+      ئێستا کاتی چاوپێکەوتن دیاری بکە 🗓️
+    </a>
   </div>
 
   <footer>
