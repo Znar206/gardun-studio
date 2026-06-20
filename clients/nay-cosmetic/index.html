@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>NAY Cosmetic</title>
+
+  <meta name="description" content="NAY Cosmetic — Premium beauty in Sulaymaniyah. Book your appointment via WhatsApp." />
+  <meta property="og:title" content="NAY Cosmetic" />
+  <meta property="og:description" content="Premium beauty in Sulaymaniyah. Book via WhatsApp." />
+  <meta property="og:image" content="og-image.jpg" />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#0a0a0a" />
+  <link rel="icon" type="image/png" href="favicon.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;500&family=Noto+Naskh+Arabic:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #0a0a0a;
+      --surface: #141414;
+      --surface2: #1e1e1e;
+      --text: #f0ece4;
+      --muted: #5a554f;
+      --accent: #e8c9a0;
+      --accent2: #c4a882;
+      --border: rgba(255,255,255,0.07);
+      --border-hover: rgba(255,255,255,0.14);
+      --radius: 16px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(22px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    body {
+      font-family: 'Outfit', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      top: -200px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 600px;
+      height: 400px;
+      background: radial-gradient(ellipse, rgba(232,201,160,0.06) 0%, transparent 70%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .hero {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      max-width: 480px;
+      text-align: center;
+      padding: 56px 24px 32px;
+      animation: fadeUp 0.8s ease both;
+    }
+
+    .logo-slot {
+      position: relative;
+      width: 100px;
+      height: 100px;
+      margin: 0 auto 28px;
+    }
+
+    .logo-slot .logo-ring {
+      position: absolute;
+      inset: 0;
+      border-radius: 50%;
+      border: 1px solid var(--accent2);
+      opacity: 0.6;
+    }
+
+    .logo-slot .logo-ring-outer {
+      position: absolute;
+      inset: -6px;
+      border-radius: 50%;
+      border: 1px solid rgba(196,168,130,0.2);
+    }
+
+    .logo-slot .logo-img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .logo-slot .logo-placeholder {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      background: var(--surface2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 26px;
+      letter-spacing: 3px;
+      color: var(--accent);
+    }
+
+    .brand-name {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(80px, 24vw, 120px);
+      letter-spacing: 0.14em;
+      line-height: 0.88;
+      color: var(--text);
+    }
+
+    .brand-sub {
+      font-size: 11px;
+      letter-spacing: 0.38em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-top: 14px;
+    }
+
+    .hero-divider {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin: 26px auto 0;
+      width: 160px;
+    }
+
+    .hero-divider span {
+      flex: 1;
+      height: 1px;
+      background: linear-gradient(to right, transparent, var(--accent2), transparent);
+      opacity: 0.4;
+    }
+
+    .hero-divider i {
+      font-size: 10px;
+      color: var(--accent2);
+      opacity: 0.6;
+      letter-spacing: 2px;
+    }
+
+    
+    .page {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      max-width: 480px;
+      padding: 0 18px 72px;
+      animation: fadeUp 0.8s 0.12s ease both;
+    }
+
+    .section-label {
+      font-size: 10px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin: 38px 0 14px;
+      direction: rtl;
+      text-align: right;
+    }
+
+    .kurdish {
+      font-family: 'Noto Naskh Arabic', serif;
+      letter-spacing: 0;
+    }
+
+    .section-label.kurdish {
+      font-size: 14px;
+      font-weight: 500;
+      text-transform: none;
+    }
+
+    .whatsapp-btn .kurdish {
+      font-size: 15px;
+      font-weight: 600;
+    }
+
+    .whatsapp-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: row-reverse;
+      gap: 12px;
+      margin-top: 32px;
+      background: var(--accent);
+      color: #0a0a0a;
+      text-decoration: none;
+      border-radius: var(--radius);
+      padding: 18px 24px;
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 0.05em;
+      transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+    }
+
+    .whatsapp-btn:hover {
+      background: #f0d8b8;
+      transform: translateY(-2px);
+      box-shadow: 0 12px 32px rgba(232,201,160,0.18);
+    }
+
+    .whatsapp-btn svg { width: 20px; height: 20px; flex-shrink: 0; }
+
+    .social-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+
+    .social-left {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .social-btn, .social-snap {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 22px 12px;
+      text-decoration: none;
+      color: var(--text);
+      font-size: 12px;
+      font-weight: 400;
+      letter-spacing: 0.05em;
+      transition: background 0.15s, border-color 0.2s, transform 0.18s, box-shadow 0.2s;
+      height: 100%;
+    }
+
+    .social-btn:hover, .social-snap:hover {
+      background: var(--surface2);
+      border-color: var(--border-hover);
+      transform: translateY(-3px);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+    }
+
+    .social-btn svg, .social-snap svg {
+      width: 24px;
+      height: 24px;
+      color: var(--accent);
+      transition: transform 0.2s;
+    }
+
+    .social-btn:hover svg, .social-snap:hover svg { transform: scale(1.15); }
+
+    .brand-strip {
+      margin-top: 24px;
+      border-radius: var(--radius);
+      overflow: hidden;
+      border: 1px solid var(--border);
+      height: 180px;
+      background: var(--surface);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+
+  .brand-strip img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 50%;
+  display: block;
+}
+
+    .brand-strip .strip-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(10,10,10,0.5) 0%, transparent 50%);
+      pointer-events: none;
+    }
+
+    .hours-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+    }
+
+    .hours-header {
+      padding: 14px 18px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .hours-header svg { width: 16px; height: 16px; color: var(--accent); flex-shrink: 0; }
+    .hours-header span { font-size: 13px; font-weight: 500; letter-spacing: 0.05em; }
+
+    .hours-badge {
+      margin-left: auto;
+      font-size: 10px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 4px 10px;
+      border-radius: 20px;
+      font-weight: 500;
+    }
+
+    .hours-badge.open {
+      background: rgba(100,200,120,0.12);
+      color: #6dc87a;
+      border: 1px solid rgba(100,200,120,0.2);
+    }
+
+    .hours-badge.closed {
+      background: rgba(200,80,80,0.12);
+      color: #e07070;
+      border: 1px solid rgba(200,80,80,0.2);
+    }
+
+    .hours-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 18px;
+      font-size: 13px;
+      border-bottom: 1px solid var(--border);
+      direction: rtl;
+    }
+
+    .hours-row:last-child { border-bottom: none; }
+    .hours-row .day { color: var(--muted); }
+    .hours-row .time { color: var(--text); direction: ltr; }
+    .hours-row.today .day { color: var(--accent); font-weight: 500; }
+    .hours-row.today .time { color: var(--accent); }
+
+    .map-card {
+      border-radius: var(--radius);
+      overflow: hidden;
+      border: 1px solid var(--border);
+    }
+
+    .map-card iframe {
+      width: 100%;
+      height: 220px;
+      border: none;
+      display: block;
+      filter: grayscale(1) invert(0.88) contrast(0.82) brightness(0.95);
+    }
+
+    .map-footer {
+      background: var(--surface);
+      padding: 14px 18px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      direction: rtl;
+    }
+
+    .map-footer svg { width: 16px; height: 16px; flex-shrink: 0; color: var(--accent); }
+    .map-footer-text { font-size: 13px; color: var(--muted); line-height: 1.5; }
+    .map-footer-text strong { display: block; color: var(--text); font-size: 13px; font-weight: 500; }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 16px 20px;
+      text-decoration: none;
+      color: var(--text);
+      font-size: 14px;
+      transition: background 0.15s, border-color 0.2s;
+    }
+
+    .contact-item:hover { background: var(--surface2); border-color: var(--border-hover); }
+    .contact-item svg { width: 18px; height: 18px; flex-shrink: 0; color: var(--accent); }
+
+    .footer {
+      text-align: center;
+      margin-top: 56px;
+      padding-top: 24px;
+      border-top: 1px solid var(--border);
+      font-size: 10px;
+      color: var(--muted);
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="hero">
+    <h1 class="brand-name">NAY</h1>
+    <p class="brand-sub">Cosmetic · Sulaymaniyah</p>
+    <div class="hero-divider">
+      <span></span>
+      <i>✦</i>
+      <span></span>
+    </div>
+  </div>
+
+  <div class="page">
+
+    <a href="https://wa.me/9647702204225?text=%D8%B3%DA%B5%D8%A7%D9%88%20%D8%AF%DB%95%D9%85%DB%95%D9%88%DB%8E%D8%AA%20%D8%AF%DB%95%D8%B1%D8%A8%D8%A7%D8%B1%DB%95%DB%8C%20%D8%A8%DB%95%D8%B1%D9%87%DB%95%D9%85%DB%95%DA%A9%D8%A7%D9%86%D8%AA%D8%A7%D9%86%20%D8%A8%D9%BE%D8%B1%D8%B3%D9%85" class="whatsapp-btn" target="_blank" rel="noopener noreferrer">
+      <svg viewBox="0 0 24 24" fill="currentColor">
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/>
+      </svg>
+      <span class="kurdish">WhatsApp پەیوەندی کردن لە ڕێگەی </span>
+    </a>
+
+   
+    <div class="brand-strip">
+      <img src="banner.jpg" alt="NAY Cosmetic" onerror="this.style.display='none'">
+      <div class="strip-overlay"></div>
+    </div>
+
+    <p class="section-label kurdish">لێرا بماندۆزەوە</p>
+    <div class="social-grid">
+      <div class="social-left">
+        <a href="https://www.instagram.com/naycosmetic1/" class="social-btn" target="_blank" rel="noopener noreferrer">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+            <rect x="2" y="2" width="20" height="20" rx="5"/>
+            <circle cx="12" cy="12" r="4.5"/>
+            <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/>
+          </svg>
+          Instagram
+        </a>
+        <a href="https://www.tiktok.com/@naycosmetic__" class="social-btn" target="_blank" rel="noopener noreferrer">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34l-.03-8.42a8.16 8.16 0 0 0 4.77 1.52V5.01a4.85 4.85 0 0 1-1-.32z"/>
+          </svg>
+          TikTok
+        </a>
+      </div>
+      <a href="https://snapchat.com/add/naycosmetic1" class="social-snap" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12.003 2C9.106 2 6.76 4.42 6.76 7.4v.33c-.71.26-1.4.27-1.69.28-.27.01-.52.14-.67.37-.15.22-.18.5-.08.74.44 1.04 1.18 1.64 1.96 2.01-.09.23-.24.49-.47.67-.51.39-1.19.5-1.82.28a.68.68 0 0 0-.85.47c-.09.34.08.7.41.82.04.02 1.53.53 1.88 1.94.01.03.02.06.04.1-1.08.46-2.08 1.27-2.08 2.14 0 .38.3.7.69.7h.06c.4.46.85.72 1.38.72.44 0 .88-.14 1.28-.4.33-.21.65-.31.97-.31.42 0 .8.16 1.12.47.62.58 1.47.88 2.35.88s1.73-.3 2.35-.88c.32-.31.7-.47 1.12-.47.32 0 .64.1.97.31.4.26.84.4 1.28.4.53 0 .98-.26 1.38-.72h.06c.39 0 .69-.32.69-.7 0-.87-1-1.68-2.08-2.14.02-.04.03-.07.04-.1.35-1.41 1.84-1.92 1.88-1.94.33-.12.5-.48.41-.82a.68.68 0 0 0-.85-.47c-.63.22-1.31.11-1.82-.28-.23-.18-.38-.44-.47-.67.78-.37 1.52-.97 1.96-2.01.1-.24.07-.52-.08-.74-.15-.23-.4-.36-.67-.37-.29-.01-.98-.02-1.69-.28V7.4C17.243 4.42 14.9 2 12.003 2z"/>
+        </svg>
+        Snapchat
+      </a>
+    </div>
+
+    <p class="section-label kurdish">کاتی خزمەتگوزاری</p>
+    <div class="hours-card">
+      <div class="hours-header">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+          <circle cx="12" cy="12" r="10"/>
+          <polyline points="12 6 12 12 16 14"/>
+        </svg>
+        <span>NAY Cosmetic</span>
+        <span class="hours-badge open" id="status-badge">Open</span>
+      </div>
+      <div class="hours-row" data-days="0,1,2,3,4,6">
+        <span class="time">9:30 AM – 12:00 AM</span>
+        <span class="day kurdish">یەکشەممە — پێنجشەممە، شەممە</span>
+      </div>
+      <div class="hours-row" data-days="5">
+        <span class="time">12:00 PM – 12:00 AM</span>
+        <span class="day kurdish">هەینی</span>
+      </div>
+    </div>
+
+    <p class="section-label kurdish">ناونیشان لە گووگڵ ماپ</p>
+    <div class="map-card">
+
+      <!-- Google Maps embed -->
+      <iframe
+       src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1211.4051081443079!2d45.40647044078905!3d35.548613720560226!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40002f4614eb5d5b%3A0xb2f7c72e4a7bc78e!2sNay%20cosmetic!5e1!3m2!1sen!2siq!4v1781210409917!5m2!1sen!2siq"
+       loading="lazy"
+       referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+      <div class="map-footer">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+          <circle cx="12" cy="9" r="2.5"/>
+        </svg>
+        <div class="map-footer-text">
+          <strong>NAY Cosmetic</strong>
+          <span class="kurdish">سلێمانی کوردستان</span>
+        </div>
+      </div>
+    </div>
+
+    <p class="section-label kurdish">ژمارەی پەیوەندی</p>
+    <a href="tel:+9647702204225" class="contact-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.5 11.5 19.79 19.79 0 0 1 1.38 2.83 2 2 0 0 1 3.35 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21 16z"/>
+      </svg>
+      +964 770 220 4225
+    </a>
+
+    <div class="footer">
+      <p>© 2025 NAY Cosmetic · Sulaymaniyah</p>
+    </div>
+
+  </div>
+
+  <script>
+    (function() {
+      var now = new Date();
+      var day = now.getDay();
+      var hour = now.getHours() + now.getMinutes() / 60;
+      var badge = document.getElementById('status-badge');
+      var isOpen = false;
+
+      if (day === 5) {
+        isOpen = hour >= 12 && hour < 24;
+      } else {
+        isOpen = hour >= 9.5 && hour < 24;
+      }
+
+      if (!isOpen) {
+        badge.textContent = 'Closed';
+        badge.className = 'hours-badge closed';
+      }
+
+      var rows = document.querySelectorAll('.hours-row');
+      rows.forEach(function(row) {
+        var days = (row.getAttribute('data-days') || '').split(',').map(Number);
+        if (days.indexOf(day) !== -1) {
+          row.classList.add('today');
+        }
+      });
+    })();
+  </script>
+
+</body>
+</html>
