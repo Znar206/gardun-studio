@@ -38,4 +38,4 @@ Live at: `https://znar206.github.io/gardun-studio/`
 
 | Folder name | Business | Contact | Built | Last updated |
 |---|---|---|---|---|
-| `nay-cosmetic` | NAY Cosmetic | 0770 220 4225 | 2026-06-21 | 2026-06-21 |
+| `nay-cosmetic` | NAY Cosmetic | 0770 220 4225 | 2026-06-06 | 2026-06-21 |
